@@ -16,6 +16,12 @@
 
 package aware
 
+import (
+	"github.com/luwuioc/ioc/context"
+)
+
 var _ Aware = (ApplicationContextAware)(nil)
 
-type ApplicationContextAware interface{}
+type ApplicationContextAware interface {
+	SetApplicationContext(ctx context.ApplicationContext)
+}

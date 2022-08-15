@@ -16,6 +16,12 @@
 
 package aware
 
+import (
+	"github.com/luwuioc/ioc/beanfactory"
+)
+
 var _ Aware = (BeanFactoryAware)(nil)
 
-type BeanFactoryAware interface{}
+type BeanFactoryAware interface {
+	SetBeanFactory(beanFactory beanfactory.BeanFactory)
+}

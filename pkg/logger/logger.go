@@ -16,4 +16,24 @@
 
 package logger
 
-type Logger interface{}
+// Logger logger root interface
+type Logger interface {
+	Debug(args ...any)
+	Debugf(template string, args ...any)
+	Info(args ...any)
+	Infof(template string, args ...any)
+	Infow(template string, args ...any)
+	Warn(args ...any)
+	Warnf(template string, args ...any)
+	Warnw(template string, args ...any)
+	Error(args ...any)
+	Errorf(template string, args ...any)
+	Errorw(template string, args ...any)
+	Fatal(args ...any)
+	Fatalf(template string, args ...any)
+	Fatalw(template string, args ...any)
+	Panic(args ...any)
+	Panicf(template string, args ...any)
+	Panicw(template string, args ...any)
+	Sync()
+}

@@ -16,4 +16,10 @@
 
 package beanfactory
 
-type BeanFactory interface{}
+import (
+	"github.com/luwuioc/container"
+)
+
+type BeanFactory interface {
+	container.Container
+}
